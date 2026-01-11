@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full">
+        <h1 class="text-3xl font-bold text-center text-white mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">To-Do List</h1>
+        <form id="task-form" class="mb-6 bg-gray-900 p-4 rounded-lg shadow-lg">
+            <input id="name" type="text" placeholder="Task name" class="w-full p-3 mb-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" required>
+            <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-3 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition duration-200 flex items-center justify-center gap-2">
+                <i data-lucide="plus"></i> Add Task
+            </button>
+        </form>
+        <ul id="task-list" class="space-y-4"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
