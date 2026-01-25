@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost/api/tasks';
+const API_BASE = 'https://todo-app-production-745d.up.railway.app/api/tasks';
 const taskForm = document.getElementById('task-form');
 const nameInput = document.getElementById('name');
 const taskList = document.getElementById('task-list');
